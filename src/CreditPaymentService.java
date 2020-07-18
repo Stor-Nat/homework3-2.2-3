@@ -1,18 +1,18 @@
 public class CreditPaymentService {
-    public double calculate (int CreditAmount, int CreditTerm) {
-        int Month = CreditTerm * 12;
+    public double calculate (int creditAmount, int creditTerm) {
+        int month = creditTerm * 12;
 
-        double InterestRate = 9.99 / 12 / 100;
-        double Numerator = CreditAmount * InterestRate;
+        double interestRate = 9.99 / 12 / 100;
+        double numerator = creditAmount * interestRate;
 
-        double Variable1 = 1 + InterestRate;
-        double Variable2 = Math.pow(Variable1, Month);
-        double Variable3 = 1 / Variable2;
-        double Denominator = 1 - Variable3;
+        double variable1 = 1 + interestRate;
+        double variable2 = Math.pow(variable1, month);
+        double variable3 = 1 / variable2;
+        double denominator = 1 - variable3;
 
-        double MonthlyPaymentYear = Numerator / Denominator;
-//        int MonthlyPaymentYearInt = (int) MonthlyPaymentYear;
+        double monthlyPaymentYear = numerator / denominator;
+//        int monthlyPaymentYearInt = (int) monthlyPaymentYear;
 
-        return MonthlyPaymentYear;
+        return monthlyPaymentYear;
     }
 }
